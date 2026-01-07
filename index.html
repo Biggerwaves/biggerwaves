@@ -30,7 +30,8 @@
             color: #ddd;
             margin-top: 10px;
             text-align: left;
-            line-height: 1.5; margin-bottom: 20px;
+            line-height: 1.5; 
+            margin-bottom: 20px;
         }
         li {
             font-size: 18px;
@@ -61,17 +62,109 @@
             }
             p { font-size: 18px; }
         }
-            a {
+        a {
             color: inherit;
             text-decoration: none;
         }
-            h2 {
-                font-size: 18px;
-                color: #aaa;
-                text-align: left;
-                margin-bottom: 20px;
-                font-weight: normal;
+        h2 {
+            font-size: 18px;
+            color: #aaa;
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        /* Product Card Styles */
+        .product-card {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background-color: #222;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .product-card:hover {
+            background-color: #2a2a2a;
+        }
+        
+        .product-card.no-link {
+            cursor: default;
+        }
+        
+        .product-card.no-link:hover {
+            background-color: #222;
+        }
+        
+        .card-left {
+            flex-shrink: 0;
+        }
+        
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .card-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .card-row-1 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .product-label {
+            font-size: 12px;
+            padding: 2px 8px;
+            background-color: #444;
+            color: #ccc;
+            border-radius: 4px;
+        }
+        
+        .product-label.secondary {
+            background-color: #2a4a2a;
+            color: #8fc98f;
+        }
+        
+        .card-row-2 {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 600px) {
+            .product-card {
+                flex-direction: column;
             }
+            
+            .product-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .product-name {
+                font-size: 15px;
+            }
+            
+            .card-row-2 {
+                font-size: 13px;
+            }
+        }
     </style>
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/png" href="favicon-tny.png">
@@ -82,12 +175,55 @@
         
         <h2>Technologist & Marketer Collective</h2>
         <p>We develop <i>ridiculously simple internet businesses</i> that serve users and customers worldwide.</p>
-        <p>Current portfolio highlight:
-            <ul>
-                <li><a href="https://apps.shopify.com/blog-post-article-tag-filter" rel=”nofollow” target="_blank">A mini blog filter and search engine for Shopify stores</a></li>
-                <li><a href="https://apps.shopify.com/file-search-bar-download" rel=”nofollow” target="_blank">A file directory widget for Shopify stores</a></li>
-            </ul>
-        </p>
+        
+        <p style="margin-bottom: 10px;">Current portfolio highlight:</p>
+        
+        <a href="https://apps.shopify.com/blog-post-article-tag-filter" target="_blank" class="product-card">
+            <div class="card-left">
+                <img src="app1logo.webp" alt="HUE Blog Filter & Search PRO" class="product-icon">
+            </div>
+            <div class="card-right">
+                <div class="card-row-1">
+                    <span class="product-name">HUE Blog Filter & Search PRO</span>
+                    <span class="product-label">Shopify App</span>
+                </div>
+                <div class="card-row-2">
+                    A mini blog filter and search engine for Shopify stores
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://apps.shopify.com/file-search-bar-download" target="_blank" class="product-card">
+            <div class="card-left">
+                <img src="app2logo.webp" alt="Download Page File Search MP" class="product-icon">
+            </div>
+            <div class="card-right">
+                <div class="card-row-1">
+                    <span class="product-name">Download Page File Search MP</span>
+                    <span class="product-label">Shopify App</span>
+                </div>
+                <div class="card-row-2">
+                    A file directory widget for Shopify stores
+                </div>
+            </div>
+        </a>
+        
+        <div class="product-card no-link">
+            <div class="card-left">
+                <img src="app3logo.webp" alt="Storefolio" class="product-icon">
+            </div>
+            <div class="card-right">
+                <div class="card-row-1">
+                    <span class="product-name">Storefolio</span>
+                    <span class="product-label">Shopify Plugin</span>
+                    <span class="product-label secondary">Acquired</span>
+                </div>
+                <div class="card-row-2">
+                    Create directory-style gallery with filters to share your store locations, brands, partners.
+                </div>
+            </div>
+        </div>
+        
         <p>Headquartered in Malaysia. Run remotely.</p>
         <p>Email: <a href="mailto:c@biggerwaveshq.com">c@biggerwaveshq.com</a></p>
         <hr>
