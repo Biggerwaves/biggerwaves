@@ -4,183 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biggerwaves Internet</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            display: flex; 
-            justify-content: center; 
-            align-items: flex-start; 
-            height: 100vh; 
-            background-color: #111; 
-            font-family: 'Arial', sans-serif;
-            padding-top: 12vh;
-        }
-        .container {
-            width: 40%;
-            max-width: 85%;
-        }
-        img {
-            width: 80%;
-            max-width: 600px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            color: #ddd;
-            margin-top: 10px;
-            text-align: left;
-            line-height: 1.5; 
-            margin-bottom: 20px;
-        }
-        li {
-            font-size: 18px;
-            color: #ddd;
-            margin-top: 10px;
-            text-align: left;
-            line-height: 1.5; 
-            margin-left: 30px;
-        }
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 1px solid #444;
-        }
-        .copyright {
-            font-size: 14px;
-            color: #bbb;
-            text-align: left;
-        }
-        @media (max-width: 900px) {
-            .container {
-                width: 65%;
-            }
-        }
-        @media (max-width: 600px) {
-            .container {
-                width: 85%;
-            }
-            p { font-size: 18px; }
-        }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        h2 {
-            font-size: 18px;
-            color: #aaa;
-            text-align: left;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-        
-        /* Product Card Styles */
-        .product-card {
-            display: flex;
-            gap: 16px;
-            padding: 16px;
-            background-color: #222;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            transition: background-color 0.2s ease;
-        }
-        
-        .product-card:hover {
-            background-color: #2a2a2a;
-        }
-        
-        .product-card.no-link {
-            cursor: default;
-        }
-        
-        .product-card.no-link:hover {
-            background-color: #222;
-        }
-        
-        .card-left {
-            flex-shrink: 0;
-        }
-        
-        .product-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-        
-        .card-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .card-row-1 {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .product-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: #fff;
-        }
-        
-        .product-label {
-            font-size: 12px;
-            padding: 2px 8px;
-            background-color: #444;
-            color: #ccc;
-            border-radius: 4px;
-        }
-        
-        .product-label.secondary {
-            background-color: #2a4a2a;
-            color: #8fc98f;
-        }
-        
-        .card-row-2 {
-            font-size: 14px;
-            color: #aaa;
-            line-height: 1.4;
-        }
-        
-        @media (max-width: 600px) {
-            .product-card {
-                flex-direction: column;
-            }
-            
-            .product-icon {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .product-name {
-                font-size: 15px;
-            }
-            
-            .card-row-2 {
-                font-size: 13px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" type="image/png" href="favicon-tny.png">
+    <link rel="icon" type="image/png" href="image/favicon-tny.png">
 </head>
 <body>
     <div class="container">
-        <img src="logo-bwi-white.png" alt="Logo">
+        <img src="image/logo-bwi-white.png" alt="Logo">
         
         <h2>Technologist & Marketer Collective</h2>
         <p>We develop <i>ridiculously simple internet businesses</i> that serve users and customers worldwide.</p>
         
-        <p style="margin-bottom: 10px;">Current portfolio highlight:</p>
+        <p style="margin-bottom: 10px;">Current portfolio highlight</p>
         
         <a href="https://apps.shopify.com/blog-post-article-tag-filter" target="_blank" class="product-card">
             <div class="card-left">
-                <img src="app1logo.webp" alt="HUE Blog Filter & Search PRO" class="product-icon">
+                <img src="image/app1logo.webp" alt="HUE Blog Filter & Search PRO" class="product-icon">
             </div>
             <div class="card-right">
                 <div class="card-row-1">
@@ -195,7 +34,7 @@
         
         <a href="https://apps.shopify.com/file-search-bar-download" target="_blank" class="product-card">
             <div class="card-left">
-                <img src="app2logo.webp" alt="Download Page File Search MP" class="product-icon">
+                <img src="image/app2logo.webp" alt="Download Page File Search MP" class="product-icon">
             </div>
             <div class="card-right">
                 <div class="card-row-1">
@@ -208,12 +47,17 @@
             </div>
         </a>
         
+        <br>
+
+        <p style="margin-bottom: 10px;">Exited asset</p>
+
         <div class="product-card no-link">
             <div class="card-left">
-                <img src="app3logo.webp" alt="Storefolio" class="product-icon">
+                <img src="image/app3logo.webp" alt="Storefolio" class="product-icon">
             </div>
             <div class="card-right">
                 <div class="card-row-1">
+                    
                     <span class="product-name">Storefolio</span>
                     <span class="product-label">Shopify Plugin</span>
                     <span class="product-label secondary">Acquired</span>
@@ -224,6 +68,7 @@
             </div>
         </div>
         
+        <br>
         <p>Headquartered in Malaysia. Run remotely.</p>
         <p>Email: <a href="mailto:c@biggerwaveshq.com">c@biggerwaveshq.com</a></p>
         <hr>
