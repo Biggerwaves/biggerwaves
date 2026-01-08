@@ -9,12 +9,12 @@ body {
     padding-top: 12vh;
 }
 .container {
-    width: 40%;
-    max-width: 85%;
+    width: 50%;
+    max-width: 90%;
 }
 img {
-    width: 80%;
-    max-width: 600px;
+    width: 60%;
+    max-width: 400px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -46,14 +46,14 @@ hr {
 }
 @media (max-width: 900px) {
     .container {
-        width: 65%;
+        width: 75%;
     }
 }
 @media (max-width: 600px) {
     .container {
-        width: 85%;
+        width: 90%;
     }
-    p { font-size: 18px; }
+    p { font-size: 16px; }
 }
 a {
     color: inherit;
@@ -67,6 +67,23 @@ h2 {
     font-weight: normal;
 }
 
+/* Product Card Grid Container */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Single card container - takes 50% width */
+.cards-grid.single {
+    grid-template-columns: 1fr;
+}
+
+.cards-grid.single .product-card {
+    max-width: 50%;
+}
+
 /* Product Card Styles */
 .product-card {
     display: flex;
@@ -74,9 +91,7 @@ h2 {
     padding: 10px;
     background-color: #373737;
     border-radius: 7px;
-    margin-bottom: 16px;
     transition: background-color 0.2s ease;
-    max-width: 550px;
 }
 
 .product-card:hover {
@@ -107,9 +122,9 @@ h2 {
 
 .card-right {
     flex: 1;
-    display: inline-grid;
+    display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .card-row-1 {
@@ -120,17 +135,18 @@ h2 {
 }
 
 .product-name {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #fff;
 }
 
 .product-label {
-    font-size: 12px;
+    font-size: 11px;
     padding: 2px 8px;
     background-color: #121212;
     color: #ccc;
     border-radius: 4px;
+    width: fit-content;
 }
 
 .product-label.secondary {
@@ -139,26 +155,40 @@ h2 {
 }
 
 .card-row-2 {
-    font-size: 14px;
+    font-size: 13px;
     color: #aaa;
     line-height: 1.4;
 }
 
-@media (max-width: 600px) {
-    .product-card {
-        flex-direction: column;
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
     }
     
+    .cards-grid.single .product-card {
+        max-width: 100%;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .card-row-2 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
     .card-left {
         width: 50px;
         height: 50px;
     }
     
     .product-name {
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .card-row-2 {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
